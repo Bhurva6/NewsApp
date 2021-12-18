@@ -1,0 +1,111 @@
+{
+	"name": "code-groovy",
+	"displayName": "code-groovy",
+	"description": "Groovy support for VSCode",
+	"version": "0.1.2",
+	"publisher": "marlon407",
+	"engines": {
+		"vscode": "^1.28.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"keywords": [
+		"groovy",
+		"grails",
+		"micronaut",
+		"search code"
+	],
+	"icon": "groovy.png",
+	"activationEvents": [
+		"onCommand:cgroovy.organizeImports",
+		"onCommand:cgroovy.organizeDependences",
+		"onLanguage:groovy",
+		"onLanguage:gsp"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/marlon407/code-groovy"
+	},
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "cgroovy.organizeImports",
+				"title": "Organize imports"
+			},
+			{
+				"command": "cgroovy.organizeDependences",
+				"title": "Organize dependences"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "cgroovy.organizeImports",
+				"key": "ctrl+shift+o",
+				"mac": "cmd+shift+o",
+				"when": ""
+			},
+			{
+				"command": "cgroovy.organizeDependences",
+				"key": "ctrl+shift+d",
+				"mac": "cmd+shift+d",
+				"when": ""
+			}
+		],
+		"snippets": [
+			{
+				"language": "groovy",
+				"path": "./snippets/groovy.json"
+			},
+			{
+				"language": "gsp",
+				"path": "./snippets/gsp.json"
+			}
+		],
+		"languages": [
+			{
+				"id": "gsp",
+				"aliases": [
+					"Groovy Server Pages"
+				],
+				"extensions": [
+					".gsp"
+				],
+				"configuration": "./language-configuration-gsp.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "gsp",
+				"scopeName": "text.html.gsp",
+				"path": "./syntaxes/gsp.tmLanguage",
+				"embeddedLanguages": {
+					"source.css": "css",
+					"source.js": "javascript",
+					"source.groovy": "groovy"
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.21",
+		"tslint": "^5.8.0",
+		"@types/node": "^8.10.25",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "9b9cdd4e-2a48-4ef1-b104-284fa5bcdb55",
+		"publisherId": "e7d954b3-7711-405a-ac26-b5bd5a548c58",
+		"publisherDisplayName": "Marlon Franca",
+		"installedTimestamp": 1620897561718
+	}
+}

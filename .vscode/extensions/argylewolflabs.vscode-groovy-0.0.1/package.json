@@ -1,0 +1,57 @@
+{
+	"name": "vscode-groovy",
+	"displayName": "vscode-groovy",
+	"description": "VSCode groovy symbols search methods",
+	"version": "0.0.1",
+	"publisher": "ArgyleWolfLabs",
+	"author": "Gaurev Sharma",
+	"license": "SEE LICENSE IN LICENSE.md",
+	"icon": "images/icon.png",
+	"keywords": [
+		"groovy",
+		"groovy symbols",
+		"search code"
+	],
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Languages"
+	],
+	"activationEvents": [
+		"onLanguage:groovy"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://gitlab.com/awl/vscode-grails"
+	},
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": []
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "mocha -r ts-node/register test/*.spec.ts"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.1.2",
+		"@types/mocha": "^2.2.48",
+		"@types/node": "^6.0.40",
+		"chai": "^4.1.2",
+		"mocha": "^2.5.3",
+		"ts-node": "^5.0.1",
+		"typescript": "^2.0.3"
+	},
+	"dependencies": {
+		"vscode": "^1.1.17",
+		"fs": "0.0.1-security"
+	},
+	"__metadata": {
+		"id": "568b3ef4-4063-4d83-8485-12a80e40cdbd",
+		"publisherId": "32e37856-56df-4c0a-b7d7-cb652f89b6ea",
+		"publisherDisplayName": "Argyle Wolf Labs",
+		"installedTimestamp": 1620897613198
+	}
+}

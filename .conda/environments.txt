@@ -1,0 +1,3 @@
+C:\Users\bhurv\anaconda3\envs\cv
+C:\Users\bhurv\anaconda3\envs\spyder3.6
+C:\Users\bhurv\anaconda3\envs\myenv
